@@ -49,7 +49,7 @@ while(true){
 	for($i=0;$i<count($listids);$i++):
 			$cross = proccess(1, $data_session['useragent'], 'friendships/create/'.$listids[$i].'/', $data_session['cookies'], hook('{"user_id":"'.$listids[$i].'"}'));
 			$cross = json_decode($cross[1]);
-			print $i.'. <b>@'.$data_session['username'].'</b> <font color="green">Sukses Follow => </font><b style="color:gray;">[ @'.$listids[$i].' ]</b><br>';
+			print $i.'. <b>@'.$data_session['username'].' Follow => '.$listids[$i].PHP_EOL;
 			flush();
 	endfor;
 }
