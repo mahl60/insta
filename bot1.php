@@ -6,7 +6,10 @@ session_start();
 require_once('fungsi.php');
 $TimeZone="+7";
 $_time=gmdate("H", time() + ($TimeZone * 60 * 60));
-$_SESSION['data'] = array('cookies' => 'ds_user=followergratis2019_001;shbid=5680;shbts=1536651690.61206;rur=ASH;mid=W5dxqQABAAFq8AVa8U3O4ad7gyVS;ds_user_id=3210662220;urlgen="{}:1fzdIg:Qvm3ntKyjBzGr_o3CWy7_eJ7qrY";sessionid=IGSC886a94dab9e846ad7ef9d0d063295522e499bea835df9e9ab35cad4f975265e6%3AuZa8Pljstv6bcbAEJzt9uzZU5XZIhYiR%3A%7B%22_auth_user_id%22%3A3210662220%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_platform%22%3A1%2C%22_token_ver%22%3A2%2C%22_token%22%3A%223210662220%3AVc4U8JW6CicZElpd4VIGnpZF8tHzUlf4%3A57bfed162d4f7f5c597c7489d58760c162342b84cc2dc7148334ff69e31b2cc4%22%2C%22last_refreshed%22%3A1536651690.6223759651%7D;mcd=3;csrftoken=24maFPfN2jnuHBmJspqsF0SBSijqZ6Kk;', 'useragent' => 'Instagram 6.22.0 Android (11/1.5.5; 240; 480x320; samsung; GT-N7000; GT-N7000; smdkc210; en_US)', 'device_id' => 'android-97e48472142cfdd1cd5d5b5ca6831cf42', 'username' => 'followergratis2019_001', 'id' => '3210662220');
+
+
+array('cookies' => 'ds_user=sandriaaput;shbid=1413;shbts=1536844850.47409;rur=ATN;mid=W5pkMQABAAGVgBFdgh0eCUaggPr9;ds_user_id=5809110785;urlgen="{}:1g0RYA:nyDe-dR1zgH8l8fy9Hbwovr6rao";sessionid=IGSC43c6a0995ac4dfcbc17835f588f762ae628ae5903474af789a86b121e2f5d017%3AoRvNnDLYPG3fV6mkWCFr2Y5I9PtAxmhL%3A%7B%22_auth_user_id%22%3A5809110785%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_platform%22%3A1%2C%22_token_ver%22%3A2%2C%22_token%22%3A%225809110785%3AgNyTOIj7QdXbYA15euIukWGBv4yTpjBg%3Ac09b6a984ce00cee077f066b642339d95d4ff04902279ac4ca902ef753eb1699%22%2C%22last_refreshed%22%3A1536844850.4871382713%7D;mcd=3;csrftoken=VfqZgGAWaJLEgfrCEBK8mnZaQTcibZ19;', 'useragent' => 'Instagram 6.22.0 Android (11/1.3.4; 120; 720x1280; samsung; GT-I9100; GT-I9100; smdkc210; en_US)', 'device_id' => 'android-0c4a4df48a930b56e7d71ec5a34b82574', 'username' => 'sandriaaput', 'id' => '5809110785');
+
 while(true){
 	if($_time>6){
       $jumlah= "15";
