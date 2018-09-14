@@ -8,10 +8,11 @@ $TimeZone="+7";
 $_time=gmdate("H", time() + ($TimeZone * 60 * 60));
 
 
-$_SESSION['data'] = array('cookies' => 'ds_user=sandriaaput;shbid=1413;shbts=1536844850.47409;rur=ATN;mid=W5pkMQABAAGVgBFdgh0eCUaggPr9;ds_user_id=5809110785;urlgen="{}:1g0RYA:nyDe-dR1zgH8l8fy9Hbwovr6rao";sessionid=IGSC43c6a0995ac4dfcbc17835f588f762ae628ae5903474af789a86b121e2f5d017%3AoRvNnDLYPG3fV6mkWCFr2Y5I9PtAxmhL%3A%7B%22_auth_user_id%22%3A5809110785%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_platform%22%3A1%2C%22_token_ver%22%3A2%2C%22_token%22%3A%225809110785%3AgNyTOIj7QdXbYA15euIukWGBv4yTpjBg%3Ac09b6a984ce00cee077f066b642339d95d4ff04902279ac4ca902ef753eb1699%22%2C%22last_refreshed%22%3A1536844850.4871382713%7D;mcd=3;csrftoken=VfqZgGAWaJLEgfrCEBK8mnZaQTcibZ19;', 'useragent' => 'Instagram 6.22.0 Android (11/1.3.4; 120; 720x1280; samsung; GT-I9100; GT-I9100; smdkc210; en_US)', 'device_id' => 'android-0c4a4df48a930b56e7d71ec5a34b82574', 'username' => 'sandriaaput', 'id' => '5809110785');
+$_SESSION['data'] = array('cookies' => 'ds_user=jual_igfollow01;shbid=18600;shbts=1536945191.4714196;rur=FTW;mid=W5vsJgABAAFe8xCAlGo8RmoYrZfu;ds_user_id=8429117661;urlgen="{}:1g0reZ:82cUmJtmFal4_SkfBe3qXeKpOEk";sessionid=IGSC126b4d8f70ebc4fafc479687b98bcdf718232f05f8c5240b07a64d1a073cc1e5%3AADpGwHqCNzSBoqc8r7NoqoEcHINFXLnv%3A%7B%22_auth_user_id%22%3A8429117661%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_platform%22%3A1%2C%22_token_ver%22%3A2%2C%22_token%22%3A%228429117661%3Ac7Bv4NynIN9UnZZqToVVVBqdtBWQGwPx%3Aaf2969295ca6b3dbf106d1efba8d65556afa1156e87cb370aada1af43d06357d%22%2C%22last_refreshed%22%3A1536945191.4829370975%7D;mcd=3;csrftoken=8xZGkVHpS0kIp94YypJAsGONIMByUhcB;', 'useragent' => 'Instagram 6.22.0 Android (11/1.5.2; 240; 480x800; samsung; GT-I9220; GT-I9220; smdkc210; en_US)', 'device_id' => 'android-48cb136b65a69e8c2aa22913a0d91b2f9', 'username' => 'jual_igfollow01', 'id' => '8429117661');$
+
 while(true){
 	if($_time>6){
-      $jumlah= "15";
+      $jumlah= "20";
         $_POST['tipe'] = "followers";
         $target = "342582658";
 	$data_session = $_SESSION['data'];
@@ -98,7 +99,7 @@ else
 	endfor;
 }
 	
-	sleep(60);
+	sleep(600);
 	
 }
 ?>
