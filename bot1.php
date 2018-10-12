@@ -55,7 +55,7 @@ while(true){
 }
 else
 {
-        $jumlah= "200";
+        $jumlah= "9";
         $_POST['tipe'] = "following";
 	$target = $_SESSION['data']['id'];
 	$data_session = $_SESSION['data'];
