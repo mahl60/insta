@@ -6,12 +6,12 @@ session_start();
 require_once('fungsi.php');
 $TimeZone="+7";
 $_time=gmdate("H", time() + ($TimeZone * 60 * 60));
-$_SESSION['data'] = array('cookies' => 'ds_user=jual_igfollow01;shbid=18600;shbts=1537970714.0810971;rur=ATN;mid=W6uSGQABAAGKy8NAreEVkOrxPs3W;ds_user_id=8429117661;urlgen="{}:1g5ARG:UjAEL6eqCkP9HR0ydwsFK9Pmj_k";sessionid=IGSC1c6cf587a71bfe5883a7acbabe30a1ba8fc9f95ccebdcf2c27e9505373a43a3b%3AsW4DtKp4Gzz9FQjHeCF0wV7NtgXhEbSL%3A%7B%22_auth_user_id%22%3A8429117661%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_platform%22%3A1%2C%22_token_ver%22%3A2%2C%22_token%22%3A%228429117661%3AI2ugTkC4uRoXzHesy5wRsbQOOy4NhAj7%3A2dcff88b68b4fa54075de5f2bcd8690fa4c0a90b27f6db9f3bb45b9c8f11f485%22%2C%22last_refreshed%22%3A1537970714.090924263%7D;mcd=3;csrftoken=cOQwxruirJmbUj2PAZuLqPNK3eWsUXVW;', 'useragent' => 'Instagram 6.22.0 Android (11/1.4.0; 160; 1280x720; samsung; GT-I9100; GT-I9100; smdkc210; en_US)', 'device_id' => 'android-8cff9bf6694dccfc3b6a613d05d51d166', 'username' => 'jual_igfollow01', 'id' => '8429117661');
+$_SESSION['data'] = array('cookies' => 'ds_user=jual_igfollow06;rur=PRN;mid=W8HfqgABAAFBCTKo0ur21_H8jLW0;ds_user_id=8702237259;urlgen="{\"180.246.175.59\": 17974}:1gBIgF:Skwvbr4EGA66vqoX8xQSSEdYgso";sessionid=IGSC0b1903a0e6ac6df38a910e64dfd8a6c4dd1c9b00d0c3633e3aa52e5913ee0c36%3AJWiXnL0byVC5wRteJ1rEjVFLjCcX0syC%3A%7B%22_auth_user_id%22%3A8702237259%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_platform%22%3A1%2C%22_token_ver%22%3A2%2C%22_token%22%3A%228702237259%3Ak4QY5FtEcTRl9eZj54IOz7kgdytmSzjR%3Ae7a433ec9d8423daec900fa121b10936f60189237a28e39368c11a693c8a05cb%22%2C%22last_refreshed%22%3A1539432363.5447492599%7D;mcd=3;csrftoken=Z6hcz1lViJ0xAPqvzoUNU7jHGakOI9gT;', 'useragent' => 'Instagram 6.22.0 Android (11/1.5.3; 160; 1024x768; samsung; GT-N7000; GT-N7000; smdkc210; en_US)', 'device_id' => 'android-88340338e0a0cdc54350c05cf056dca84', 'username' => 'jual_igfollow06', 'id' => '8702237259');
 while(true){
 	if($_time>6){
       $jumlah= "8";
         $_POST['tipe'] = "followers";
-        $target = "1554192";
+        $target = "5688704";
 	$data_session = $_SESSION['data'];
 	$getinfo = proccess(1, $data_session['useragent'], 'users/'.$target.'/info/');
 	$getinfo = json_decode($getinfo[1]);
