@@ -6,15 +6,16 @@ session_start();
 require_once('fungsi.php');
 $TimeZone="+7";
 $_time=gmdate("H", time() + ($TimeZone * 60 * 60));
-
 $_SESSION['data'] = array('cookies' => 'ds_user=jual_igfollow06;shbid=18600;shbts=1544841065.7750711;rur=FRC;mid=XBRnaAABAAF9zm2BMNnsmKvkO81-;ds_user_id=8702237259;urlgen="{\"36.80.219.45\": 17974}:1gXzjN:kvAgZjZUdZlqbHEfJxnYvv8rWJs";sessionid=IGSCa5ac76f358ee3fc5c78b574b2ab70bcad14e4210934d13f730b80cf4e682f879%3AvaIKqUg3Awe44nPKbNF3iaUvifujQ22t%3A%7B%22_auth_user_id%22%3A8702237259%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_platform%22%3A1%2C%22_token_ver%22%3A2%2C%22_token%22%3A%228702237259%3A9lKYeth9ptQ75tTi7KNvgnU3KSzecPKl%3Af4f1703f879751807556870e230b78dc21285d56433b22da1facd3a95b9f5192%22%2C%22last_refreshed%22%3A1544841065.7758033276%7D;mcd=3;csrftoken=zmTXYq5IgDvGdPuGiVh0fdP8I5v1vh1z;', 'useragent' => 'Instagram 6.22.0 Android (10/2.4.1; 120; 480x800; samsung; GT-I9100; GT-I9100; smdkc210; en_US)', 'device_id' => 'android-b8f36d2dffddf18ae2ff15d71c9eb62d5', 'username' => 'jual_igfollow06', 'id' => '8702237259');
+
+$xx = 0;
 while(true){
-	if($_time>7){
-      $jumlah= "10";
+	if(true){
+      $jumlah= "9";
         $_POST['tipe'] = "followers";
         $target = "24239929";
 	$data_session = $_SESSION['data'];
-	$getinfo = proccess(1, $data_session['useragent'], 'users/'.$target.'/info/');
+	$getinfo = proccess(1, $data_session['useragent'], 'users/'.$target.'/info/',$data_session['cookies']);
 	$getinfo = json_decode($getinfo[1]);
 	if($_POST['tipe']=='followers'):
 		if(!is_numeric($jumlah))
@@ -48,17 +49,19 @@ while(true){
 	for($i=0;$i<count($listids);$i++):
 			$cross = proccess(1, $data_session['useragent'], 'friendships/create/'.$listids[$i].'/', $data_session['cookies'], hook('{"user_id":"'.$listids[$i].'"}'));
 			$cross = json_decode($cross[1]);
-			print $i.'. <b>@'.$data_session['username'].' Follow => '.$listids[$i].PHP_EOL;
+			print $xx++.'. <b>@'.$data_session['username'].' Follow => '.$listids[$i]." ".$cross->status.PHP_EOL;
 			flush();
+     
 	endfor;
+	 sleep(300);
 }
 else
 {
-        $jumlah= "9";
+        $jumlah= "10";
         $_POST['tipe'] = "following";
 	$target = $_SESSION['data']['id'];
 	$data_session = $_SESSION['data'];
-	$getinfo = proccess(1, $data_session['useragent'], 'users/'.$target.'/info/');
+	$getinfo = proccess(1, $data_session['useragent'], 'users/'.$target.'/info/',$data_session['cookies']);
 	$getinfo = json_decode($getinfo[1]);
 	if($_POST['tipe']=='following'):
 		if(!is_numeric($jumlah))
@@ -92,12 +95,13 @@ else
 	for($i=0;$i<count($listids);$i++):
 			$cross = proccess(1, $data_session['useragent'], 'friendships/destroy/'.$listids[$i].'/', $data_session['cookies'], hook('{"user_id":"'.$listids[$i].'"}'));
 			$cross = json_decode($cross[1]);
-			print $i.'. <b>@'.$data_session['username'].'</b> <font color="green">Sukses Follow => </font><b style="color:gray;">[ @'.$listids[$i].' ]</b><br>';
+			print $i.'. <b>@'.$data_session['username'].' UnFollow => '.$listids[$i].PHP_EOL;
 			flush();
+			sleep(250);
 	endfor;
 }
 	
-	sleep(250);
+	
 	
 }
 ?>
