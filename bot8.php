@@ -11,7 +11,7 @@ $_SESSION['data'] = array('cookies' => 'ds_user=jual_igfollow08;shbid=18600;shbt
 
 $xx = 0;
 while(true){
-	$_time < 7
+	if($_time>6){
       $jumlah= "9";
         $_POST['tipe'] = "followers";
         $target = "1918078581";
@@ -54,7 +54,7 @@ while(true){
 			flush();
      
 	endfor;
-	 sleep(300);
+	 sleep(240);
 }
 else
 {
